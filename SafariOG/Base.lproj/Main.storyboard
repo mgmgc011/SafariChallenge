@@ -133,6 +133,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="onBackButton" destination="XeB-wc-mJX" id="Rd2-YY-4Xk"/>
+                        <outlet property="onFowardButton" destination="YZC-sx-xwn" id="b6C-u5-05f"/>
                         <outlet property="spinner" destination="z09-9W-kFX" id="lGw-Pu-TQT"/>
                         <outlet property="urlTextField" destination="oIs-YN-3eX" id="A6q-yX-FXn"/>
                         <outlet property="webView" destination="zs1-J1-Oxx" id="LjC-Pi-4Mj"/>

@@ -12,6 +12,8 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UITextField *urlTextField;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (weak, nonatomic) IBOutlet UIButton *onBackButton;
+@property (weak, nonatomic) IBOutlet UIButton *onFowardButton;
 
 
 @end
@@ -29,6 +31,19 @@
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView {
     [self.spinner stopAnimating];
+    
+    
+    if ([webView canGoBack])  {
+        [self.onBackButton setEnabled:YES];
+    } else {
+        [self.onBackButton setEnabled:NO];
+    }
+    
+    if ([webView canGoForward]) {
+        [self.onFowardButton setEnabled:YES];
+    } else {
+        [self.onFowardButton setEnabled:NO];
+    }
 }
 
 
