@@ -21,7 +21,7 @@
                                 <rect key="frame" x="49" y="192" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="52" width="400" height="548"/>
+                                    <rect key="frame" x="0.0" y="52" width="400" height="510"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="VLv-p7-sFT"/>
@@ -41,27 +41,75 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ClI-w9-Swk"/>
                                 </connections>
                             </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="z09-9W-kFX">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <color key="color" red="0.0029709475027636101" green="0.20901838926611138" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="182" y="307" width="37" height="37"/>
+                                </variation>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OgY-IS-i2y">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YZC-sx-xwn">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="&gt;"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="38" y="3" width="30" height="30"/>
+                                        </variation>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeB-wc-mJX">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="&lt;"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="3" width="30" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="onBackButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5U8-X1-3O3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="YZC-sx-xwn"/>
+                                        <exclude reference="XeB-wc-mJX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="565" width="400" height="35"/>
+                                    <mask key="subviews">
+                                        <include reference="YZC-sx-xwn"/>
+                                        <include reference="XeB-wc-mJX"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="oIs-YN-3eX"/>
+                                <exclude reference="z09-9W-kFX"/>
+                                <exclude reference="OgY-IS-i2y"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="oIs-YN-3eX"/>
+                                <include reference="z09-9W-kFX"/>
+                                <include reference="OgY-IS-i2y"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="spinner" destination="z09-9W-kFX" id="lGw-Pu-TQT"/>
                         <outlet property="urlTextField" destination="oIs-YN-3eX" id="A6q-yX-FXn"/>
                         <outlet property="webView" destination="zs1-J1-Oxx" id="LjC-Pi-4Mj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="325"/>
+            <point key="canvasLocation" x="700.5" y="299"/>
         </scene>
     </scenes>
 </document>
