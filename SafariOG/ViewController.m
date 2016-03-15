@@ -31,16 +31,22 @@
     [self.spinner stopAnimating];
 }
 
+
+
 - (IBAction)onBackButtonPressed:(id)sender {
     [_webView goBack];
 }
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onForwardButtonPressed:(id)sender {
+    [_webView goForward];
 }
+- (IBAction)onStopLoadingButtonPressed:(id)sender {
+    [_webView stopLoading];
+}
+- (IBAction)onReloadButtonPressed:(id)sender {
+    [_webView reload];
+}
+
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     NSURL *url = [NSURL URLWithString:textField.text];
